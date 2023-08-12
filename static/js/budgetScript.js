@@ -1,6 +1,3 @@
-'use strict'
-
-
 const btnEdit = document.getElementById('bnt-edit')
 const inputBudget = document.getElementById('budget')
 const btnBack = document.getElementById('btn-back')

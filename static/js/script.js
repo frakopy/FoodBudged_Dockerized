@@ -33,7 +33,8 @@ const pushAlert = (codeResponse) => {
     }
     //Independently wich one is the code we need to show the alert and afeter 5 seconds we hide it using setTimeout function
     alert.style.display = 'block'
-    setTimeout(() => { //After 5 seconds we call a resetForm that simply send submit event for clear data input
+    //After 5 seconds we call a resetForm that simply send submit event for clear data input
+    setTimeout(() => { 
         alert.style.display = 'none'
     }, 5000)
 }
