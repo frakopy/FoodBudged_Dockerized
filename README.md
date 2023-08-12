@@ -1,28 +1,27 @@
 # **Food Budget App**
 The Food Budget App is a web application that helps users keep track of their food expenses and manage their budget effectively. Built using Flask, HTML, CSS, and JavaScript, this app allows users to register an account, log their food bills, and gain insights into their spending habits. Whether you're a student, professional, or anyone looking to maintain control over your food expenses, the Food Budget App has got you covered.
 
+## Requirements
+[Install Docker](https://docs.docker.com/engine/install/)
+
+[Install Docker Compose (Linux)](https://docs.docker.com/compose/install/#install-compose-on-linux-systems) (Not necessary if using **Docker Desktop for Mac** o **Docker Desktop for Windows**)
+
+
 ## Installation
 To run the Food Budget App locally, follow these steps:
 
 1. Clone the repository to your local machine:
-`git clone https://github.com/your-username/food-budget-app.git`
+`git clone https://github.com/frakopy/FoodBudged_Dockerized.git`
 
 2. Navigate to the project directory:
 `cd food-budget-app`
 
-3. Set up a virtual environment (optional but recommended):
-`python3 -m venv venv`
+3. Start app
+```
+docker-compose up -d --build
+```
 
-4. Activate the virtual environment:
-`source venv/bin/activate`
-
-5. Install the required dependencies:
-`pip install -r requirements.txt`
-
-6. Start the Flask development server:
-`flask run`
-
-Access the web app in your browser at http://localhost:5000.
+Access the web app in your browser at http://localhost:5001.
 
 ## Features
 * User Registration: Users can register an account to keep track of their food expenses securely.
