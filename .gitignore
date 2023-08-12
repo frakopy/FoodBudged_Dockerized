@@ -55,6 +55,9 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# pem for AWS instance
+*.pem
+
 # Translations
 *.mo
 *.pot
