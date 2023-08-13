@@ -23,7 +23,10 @@ db = database()
 @app.route('/') 
 def index():
     budget = db.get_budget(mysql)
-    budget = f'${budget:.2f}'
+    if budget:
+        budget = f'${budget:.2f}'
+    else:
+        budget = 0
     return render_template('index.html', budget=budget)
 
 @app.route('/initialBudget')
