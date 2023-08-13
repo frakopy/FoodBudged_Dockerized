@@ -23,10 +23,7 @@ db = database()
 @app.route('/') 
 def index():
     budget = db.get_budget(mysql)
-    if budget > 0:
-        budget = f'${budget:.2f}'
-    else:
-        budget = 0
+    budget = f'${budget:.2f}'
     return render_template('index.html', budget=budget)
 
 @app.route('/initialBudget')
@@ -39,7 +36,7 @@ def initial_budget():
 def update_budget():
     data = request.json
     new_budget = data['newBudget']
-    if new_budget.isdigit():
+    if new_budget:
         new_budget = float(new_budget)
         result, budget_seted = db.update_budget(mysql, new_budget)
         return jsonify(code_response = result, budgetSeted = budget_seted)

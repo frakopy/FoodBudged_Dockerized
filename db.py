@@ -10,7 +10,7 @@ class database():
             cursor.close()
             return budget
         except Exception as e:
-            return e
+            return str(e)
 
     def get_budget(self, mysql):
         try:
@@ -20,7 +20,7 @@ class database():
             cursor.close()
             return budget
         except Exception as e:
-            return e
+            return str(e)
 
     def get_all(self, mysql):
         try:
