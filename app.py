@@ -23,7 +23,7 @@ db = database()
 @app.route('/') 
 def index():
     budget = db.get_budget(mysql)
-    if budget:
+    if budget > 0:
         budget = f'${budget:.2f}'
     else:
         budget = 0
